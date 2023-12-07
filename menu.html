@@ -1,0 +1,154 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Menu - Pastry Retail</title>
+	<link rel="stylesheet" href="style.css">
+    <style>
+ 
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 20px;
+}
+
+
+/* Menu */
+.menu {
+	margin-top: 80px;
+}
+
+.menu h2 {
+	font-size: 36px;
+	font-weight: bold;
+	text-align: center;
+	margin-bottom: 40px;
+}
+
+.menu-items {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 40px;
+}
+
+.menu-item {
+	background-color: #FFF;
+	border-radius: 8px;
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.menu-item img {
+	max-width: 100%;
+	margin-bottom: 20px;
+}
+
+.menu-item h3 {
+	font-size: 24px;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+
+.menu-item p {
+	font-size: 16px;
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.price {
+	font-size: 20px;
+	font-weight: bold;
+	color: #f26724;
+	margin-top: auto;
+}
+
+.menu-item.active {
+  border: 5px solid #f26724;
+}
+
+    </style>
+</head>
+<body>
+	<header class="header">
+		<h1>Pastry Retail</h1>
+		<nav class="nav">
+			<ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about-us.html">About Us</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact-us.html">Contact Us</a></li>
+              </ul>
+		</nav>
+	</header>
+
+	<section class="menu">
+		<div class="container">
+			<h2>Our Menu</h2>
+			<div class="menu-items">
+				<div class="menu-item">
+					<img src="images/1.jpg" alt="Pastry Item">
+					<h3>Red Velvet Cake</h3>
+					<p> A moist and fluffy cake with a rich red color and a hint of cocoa. Topped with creamy cream cheese frosting and fresh berries, this cake is perfect for any occasion.</p>
+					<span class="price">$49.99</span>
+				</div>
+				<div class="menu-item">
+					<img src="images/2.jpg" alt="Pastry Item">
+					<h3>Dark chocolate cake</h3>
+					<p> A decadent and indulgent cake with a deep chocolate flavor and a smooth ganache. Made with high-quality dark chocolate and cocoa powder, this cake will satisfy your sweet tooth.</p>
+					<span class="price">$35.99</span>
+				</div>
+				<div class="menu-item">
+					<img src="images/3.jpg" alt="Pastry Item">
+					<h3>Blueberry cupcake</h3>
+					<p>A light and tender cupcake with juicy blueberries baked inside. Frosted with a tangy lemon buttercream and sprinkled with more blueberries, these cupcakes are a refreshing treat.</p>
+					<span class="price">$3.99</span>
+				</div>
+				<div class="menu-item">
+					<img src="images/4.jpg" alt="Pastry Item">
+					<h3>Strawberry cupcake</h3>
+					<p>A soft and moist cupcake with fresh strawberry puree and chunks. Topped with a fluffy whipped cream frosting and sliced strawberries, these cupcakes are a summer delight.</p>
+					<span class="price">$3.99</span>
+				</div>
+				<div class="menu-item">
+					<img src="images/5.jpg" alt="Pastry Item">
+					<h3>Chocolate chip cookies</h3>
+					<p> A classic and delicious cookie with crunchy edges and chewy centers. Loaded with semi-sweet chocolate chips and a touch of vanilla, these cookies are irresistible.</p>
+					<span class="price">$3.29</span>
+				</div>
+				<div class="menu-item">
+					<img src="images/6.jpg" alt="Pastry Item">
+					<h3>Sugar cookies</h3>
+					<p>A simple and versatile cookie with a buttery and sweet flavor. Cut into various shapes and decorated with colorful icing and sprinkles, these cookies are fun to make and eat.</p>
+					<span class="price">$3.19</span>
+				</div>
+			</div>
+		</div>
+	</section>
+	<script>
+
+const menuItems = document.querySelectorAll('.menu-item');
+
+
+menuItems.forEach(item => {
+  item.addEventListener('click', () => {
+ 
+    menuItems.forEach(item => item.classList.remove('active'));
+    
+  
+    item.classList.add('active');
+  });
+});
+	</script>
+
+	<footer>
+        <div class="container">
+            <p>&copy; 2023 Pastry Retail</p>
+        </div>
+    </footer>
+</body>
+</html>    
